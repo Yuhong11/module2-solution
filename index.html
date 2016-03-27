@@ -4,11 +4,26 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="device-width, initial-scale=1">
     <title>Module2-solution by Yuhong11</title>
+    <link rel="stylesheet" href="css/week2.css">
   </head>
-
   <body>
+    <h1>Intel x86 Architecture Design</h1>
 
-
+    <div id="block1" class="container" >
+      <p id="subt1" class="subtitle">Superscalar Pipelining</p>
+      <p class="maintext">Three instructions ( superscalar ) are being fetched at each clock cycle. A typical modern Intel processor contains around 33 pipeline stages. The key idea of pipelining is to be able to spit out one execution result per clock cycle compared to the primitive single stage designs that would otherwise consumes at least five cycles to achieve one instruction. Pipelining largely increases processor speed compared to simply cranking up frequencies.</p>
+    </div>
     
+    <div id="block2" class="container" >
+      <p id="subt2" class="subtitle">Branch Prediction</p>
+      <p class="maintext">Many times when the next ( a few ) instructions depend on the result of previous instructions ( e.g., if conditions ), a prediction must be made. In general, floating number problems are easier to predict but integer comparisons are more difficult to anticipate. If the branch is predicted wrong, the whole pipeline must be flushed out and restart by fetching the correct branch.</p>
+    </div>
+
+    <div id="block3" class="container">
+      <p id="subt3" class="subtitle">Out-of-Order Execution</p>
+      <p class="maintext">This is the hardware-level parallelism. Instructions that use different CPU resources (e.g., memory vs register access ) can be executed simultaneously without causing troubles. This feature speeds up CPU farther on top of the pipelining design.</p>
+    </div>
+
+
   </body>
 </html>
